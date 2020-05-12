@@ -4,11 +4,9 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class MTGManaBaseBuilder {
+    public ArrayList<LandType> defaultLandTypes;
     ArrayList<ManaColor> deckColors;
     private ArrayList<LandType> landTypes;
-
-    public ArrayList<LandType> defaultLandTypes;
-
     private ArrayList<Land> allLands;
 
     private ArrayList<LandType> allImplementedLandTypes;
@@ -53,7 +51,20 @@ public class MTGManaBaseBuilder {
         allLands.add(new Land(LandType.SNOWCOVERED, 'R', "Snow-Covered Mountain"));
         allLands.add(new Land(LandType.SNOWCOVERED, 'G', "Snow-Covered Forest"));
         allImplementedLandTypes.add(LandType.SNOWCOVERED);
-
+        //Castles
+        allLands.add(new Land(LandType.CASTLE, 'W', "Castle Ardenveil"));
+        allLands.add(new Land(LandType.CASTLE, 'U', "Castle Vantress"));
+        allLands.add(new Land(LandType.CASTLE, 'B', "Castle Locthwain"));
+        allLands.add(new Land(LandType.CASTLE, 'R', "Castle Embereth"));
+        allLands.add(new Land(LandType.CASTLE, 'G', "Garenbrig"));
+        allImplementedLandTypes.add(LandType.CASTLE);
+        //mono Creature
+        allLands.add(new Land(LandType.MONOCREATURE, ManaColor.ColorPairingNameToMana("W"), "Forbidding Watchtower"));
+        allLands.add(new Land(LandType.MONOCREATURE, ManaColor.ColorPairingNameToMana("U"), "Faerie Conclave"));
+        allLands.add(new Land(LandType.MONOCREATURE, ManaColor.ColorPairingNameToMana("B"), "Spawning Pool"));
+        allLands.add(new Land(LandType.MONOCREATURE, ManaColor.ColorPairingNameToMana("R"), "Ghitu Encampment"));
+        allLands.add(new Land(LandType.MONOCREATURE, ManaColor.ColorPairingNameToMana("G"), "Treetop Village"));
+        allImplementedLandTypes.add(LandType.MONOCREATURE);
 
 
         //Duals
@@ -186,7 +197,69 @@ public class MTGManaBaseBuilder {
         allLands.add(new Land(LandType.SCRYTEMPLE, ManaColor.ColorPairingNameToMana(ManaColor.BOROS), "Temple of Triumph"));
         allLands.add(new Land(LandType.SCRYTEMPLE, ManaColor.ColorPairingNameToMana(ManaColor.SIMIC), "Temple of Mystery"));
         allImplementedLandTypes.add(LandType.SCRYTEMPLE);
-
+        //Tango
+        allLands.add(new Land(LandType.SHADOW, ManaColor.ColorPairingNameToMana(ManaColor.AZORIUS), "Prairie Stream"));
+        allLands.add(new Land(LandType.SHADOW, ManaColor.ColorPairingNameToMana(ManaColor.DIMIR), "Sunken Hollow"));
+        allLands.add(new Land(LandType.SHADOW, ManaColor.ColorPairingNameToMana(ManaColor.RAKDOS), "Smoldering Marsh"));
+        allLands.add(new Land(LandType.SHADOW, ManaColor.ColorPairingNameToMana(ManaColor.GRUUL), "Cinder Glade"));
+        allLands.add(new Land(LandType.SHADOW, ManaColor.ColorPairingNameToMana(ManaColor.SELESNYA), "Canopy Vista"));
+        allImplementedLandTypes.add(LandType.TANGO);
+        //Shadow
+        allLands.add(new Land(LandType.TANGO, ManaColor.ColorPairingNameToMana(ManaColor.AZORIUS), "Port Town"));
+        allLands.add(new Land(LandType.TANGO, ManaColor.ColorPairingNameToMana(ManaColor.DIMIR), "Choked Estuary"));
+        allLands.add(new Land(LandType.TANGO, ManaColor.ColorPairingNameToMana(ManaColor.RAKDOS), "Foreboding Ruins"));
+        allLands.add(new Land(LandType.TANGO, ManaColor.ColorPairingNameToMana(ManaColor.GRUUL), "Game Trail"));
+        allLands.add(new Land(LandType.TANGO, ManaColor.ColorPairingNameToMana(ManaColor.SELESNYA), "Fortified Village"));
+        allImplementedLandTypes.add(LandType.SHADOW);
+        //Bond
+        allLands.add(new Land(LandType.BOND, ManaColor.ColorPairingNameToMana(ManaColor.AZORIUS), "Sea of Clouds"));
+        allLands.add(new Land(LandType.BOND, ManaColor.ColorPairingNameToMana(ManaColor.DIMIR), "Morphing Pool"));
+        allLands.add(new Land(LandType.BOND, ManaColor.ColorPairingNameToMana(ManaColor.RAKDOS), "Luxury Suite"));
+        allLands.add(new Land(LandType.BOND, ManaColor.ColorPairingNameToMana(ManaColor.GRUUL), "Spire Garden"));
+        allLands.add(new Land(LandType.BOND, ManaColor.ColorPairingNameToMana(ManaColor.SELESNYA), "Bountiful Promenade"));
+        allImplementedLandTypes.add(LandType.BOND);
+        //Slow Fetch
+        allLands.add(new Land(LandType.SLOWFETCH, ManaColor.ColorPairingNameToMana(ManaColor.AZORIUS), "Flood Pain"));
+        allLands.add(new Land(LandType.SLOWFETCH, ManaColor.ColorPairingNameToMana(ManaColor.DIMIR), "Bad River"));
+        allLands.add(new Land(LandType.SLOWFETCH, ManaColor.ColorPairingNameToMana(ManaColor.RAKDOS), "Rocky Tar Pit"));
+        allLands.add(new Land(LandType.SLOWFETCH, ManaColor.ColorPairingNameToMana(ManaColor.GRUUL), "Mountain Valley"));
+        allLands.add(new Land(LandType.SLOWFETCH, ManaColor.ColorPairingNameToMana(ManaColor.SELESNYA), "Grasslands"));
+        allImplementedLandTypes.add(LandType.SLOWFETCH);
+        //Creature
+        allLands.add(new Land(LandType.CREATURE, ManaColor.ColorPairingNameToMana(ManaColor.AZORIUS), "Celestial Colonade"));
+        allLands.add(new Land(LandType.CREATURE, ManaColor.ColorPairingNameToMana(ManaColor.DIMIR), "Creeping Tarpit"));
+        allLands.add(new Land(LandType.CREATURE, ManaColor.ColorPairingNameToMana(ManaColor.RAKDOS), "Lavaclaw Reaches"));
+        allLands.add(new Land(LandType.CREATURE, ManaColor.ColorPairingNameToMana(ManaColor.GRUUL), "Raging Ravine"));
+        allLands.add(new Land(LandType.CREATURE, ManaColor.ColorPairingNameToMana(ManaColor.SELESNYA), "Stirring Wildwood"));
+        allLands.add(new Land(LandType.CREATURE, ManaColor.ColorPairingNameToMana(ManaColor.ORZHOV), "Shamberling Vent"));
+        allLands.add(new Land(LandType.CREATURE, ManaColor.ColorPairingNameToMana(ManaColor.IZZET), "Wandering Fumarole"));
+        allLands.add(new Land(LandType.CREATURE, ManaColor.ColorPairingNameToMana(ManaColor.GOLGARI), "Hissing Quagmire"));
+        allLands.add(new Land(LandType.CREATURE, ManaColor.ColorPairingNameToMana(ManaColor.BOROS), "Needle Spires"));
+        allLands.add(new Land(LandType.CREATURE, ManaColor.ColorPairingNameToMana(ManaColor.SIMIC), "Lumbering Falls"));
+        allImplementedLandTypes.add(LandType.CREATURE);
+        //Tainted
+        allLands.add(new Land(LandType.TAINTED, ManaColor.ColorPairingNameToMana(ManaColor.DIMIR), "Tainted Isle"));
+        allLands.add(new Land(LandType.TAINTED, ManaColor.ColorPairingNameToMana(ManaColor.RAKDOS), "Tainted Peak"));
+        allLands.add(new Land(LandType.TAINTED, ManaColor.ColorPairingNameToMana(ManaColor.ORZHOV), "Tainted Field"));
+        allLands.add(new Land(LandType.TAINTED, ManaColor.ColorPairingNameToMana(ManaColor.GOLGARI), "Tainted Wood"));
+        allImplementedLandTypes.add(LandType.TAINTED);
+        //Creature
+        allLands.add(new Land(LandType.GAIN, ManaColor.ColorPairingNameToMana(ManaColor.AZORIUS), "Tranquil Cove"));
+        allLands.add(new Land(LandType.GAIN, ManaColor.ColorPairingNameToMana(ManaColor.DIMIR), "Dismal Backwater"));
+        allLands.add(new Land(LandType.GAIN, ManaColor.ColorPairingNameToMana(ManaColor.RAKDOS), "Bloodfell Caves"));
+        allLands.add(new Land(LandType.GAIN, ManaColor.ColorPairingNameToMana(ManaColor.GRUUL), "Rugged Highlands"));
+        allLands.add(new Land(LandType.GAIN, ManaColor.ColorPairingNameToMana(ManaColor.SELESNYA), "Blossoming Sands"));
+        allLands.add(new Land(LandType.GAIN, ManaColor.ColorPairingNameToMana(ManaColor.ORZHOV), "Scoured Barrens"));
+        allLands.add(new Land(LandType.GAIN, ManaColor.ColorPairingNameToMana(ManaColor.IZZET), "Swiftwater Cliffs"));
+        allLands.add(new Land(LandType.GAIN, ManaColor.ColorPairingNameToMana(ManaColor.GOLGARI), "Jungle Hollow"));
+        allLands.add(new Land(LandType.GAIN, ManaColor.ColorPairingNameToMana(ManaColor.BOROS), "Wind-Scarred Crag"));
+        allLands.add(new Land(LandType.GAIN, ManaColor.ColorPairingNameToMana(ManaColor.SIMIC), "Thornwood Falls"));
+        allLands.add(new Land(LandType.GAIN, ManaColor.ColorPairingNameToMana(ManaColor.AZORIUS), "Sejiri Refuge"));
+        allLands.add(new Land(LandType.GAIN, ManaColor.ColorPairingNameToMana(ManaColor.DIMIR), "Jwar Isle Refuge"));
+        allLands.add(new Land(LandType.GAIN, ManaColor.ColorPairingNameToMana(ManaColor.RAKDOS), "Akomi Refuge"));
+        allLands.add(new Land(LandType.GAIN, ManaColor.ColorPairingNameToMana(ManaColor.GRUUL), "Kazandu Refuge"));
+        allLands.add(new Land(LandType.GAIN, ManaColor.ColorPairingNameToMana(ManaColor.SELESNYA), "Graypelt Refuge"));
+        allImplementedLandTypes.add(LandType.GAIN);
 
 
         //Tri Taps
@@ -208,7 +281,6 @@ public class MTGManaBaseBuilder {
         allLands.add(new Land(LandType.TRIOME, ManaColor.ColorPairingNameToMana(ManaColor.MARDU), "Savai Triome"));
         allLands.add(new Land(LandType.TRIOME, ManaColor.ColorPairingNameToMana(ManaColor.TEMUR), "Ketria Triome"));
         allImplementedLandTypes.add(LandType.TRIOME);
-
 
 
         allLands.add(new Land(LandType.FIVECOLOR, ManaColor.ColorPairingNameToMana("Five Color"), "Mana Confluence"));

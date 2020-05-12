@@ -16,7 +16,7 @@ public class Main {
         MTGManaBaseBuilder mmbb = new MTGManaBaseBuilder(ManaColor.ColorPairingNameToMana(inputString));
 
         System.out.print(String.format("Use default LandTypes(%s)? [y]/[n]: ", mmbb.defaultLandTypes));
-        if(!scanner.nextLine().equals("y")){
+        if (!scanner.nextLine().equals("y")) {
             ArrayList<LandType> types = new ArrayList<>();
             for (LandType type : mmbb.getAllImplementedLandTypes()) {
                 System.out.print(String.format("Do you want %s Lands in your deck? [y]/[n]: ", type));
@@ -25,8 +25,6 @@ public class Main {
             }
             mmbb.setLandTypes(types);
         }
-
-
 
 
         Map<ManaColor, Integer> manaPips = new HashMap<>();
