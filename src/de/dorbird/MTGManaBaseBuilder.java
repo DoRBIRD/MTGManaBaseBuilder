@@ -154,7 +154,7 @@ public class MTGManaBaseBuilder {
         allLands.add(new Land(LandType.BOUNCE, ManaColor.ColorPairingNameToMana(ManaColor.AZORIUS), "Azorius Chancery"));
         allLands.add(new Land(LandType.BOUNCE, ManaColor.ColorPairingNameToMana(ManaColor.DIMIR), "Dimir Aqueduct"));
         allLands.add(new Land(LandType.BOUNCE, ManaColor.ColorPairingNameToMana(ManaColor.RAKDOS), "Rakdos Carnarium"));
-        allLands.add(new Land(LandType.BOUNCE, ManaColor.ColorPairingNameToMana(ManaColor.GRUUL), "Copperline Gorge"));
+        allLands.add(new Land(LandType.BOUNCE, ManaColor.ColorPairingNameToMana(ManaColor.GRUUL), "Gruul Turf"));
         allLands.add(new Land(LandType.BOUNCE, ManaColor.ColorPairingNameToMana(ManaColor.SELESNYA), "Selesnya Sanctuary"));
         allLands.add(new Land(LandType.BOUNCE, ManaColor.ColorPairingNameToMana(ManaColor.ORZHOV), "Orzhov Basilica"));
         allLands.add(new Land(LandType.BOUNCE, ManaColor.ColorPairingNameToMana(ManaColor.IZZET), "Izzet Boilerworks"));
@@ -226,7 +226,6 @@ public class MTGManaBaseBuilder {
         allLands.add(new Land(LandType.TRIBAL, ManaColor.ColorPairingNameToMana("Five Color"), "Muta Vault"));
         allLands.add(new Land(LandType.TRIBAL, ManaColor.ColorPairingNameToMana("Five Color"), "Cavern of Souls"));
         allImplementedLandTypes.add(LandType.TRIBAL);
-
     }
 
     public ArrayList<Land> getAllMatchingLands() {
