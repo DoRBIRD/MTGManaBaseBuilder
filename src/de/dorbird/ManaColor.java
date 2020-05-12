@@ -5,6 +5,28 @@ import java.util.ArrayList;
 public enum ManaColor {
     WHITE, BLUE, BLACK, RED, GREEN, COLORLESS;
 
+    public static final String AZORIUS = "Azorius";
+    public static final String DIMIR = "Dimir";
+    public static final String RAKDOS = "Rakdos";
+    public static final String GRUUL = "Gruul";
+    public static final String SELESNYA = "Selesnya";
+    public static final String ORZHOV = "Orzhov";
+    public static final String IZZET = "Izzet";
+    public static final String GOLGARI = "Golgari";
+    public static final String BOROS = "Boros";
+    public static final String SIMIC = "Simic";
+
+    public static final String ESPER = "Esper";
+    public static final String GRIXIS = "Grixis";
+    public static final String JUND = "Jund";
+    public static final String NAYA = "Naya";
+    public static final String BANT = "Bant";
+    public static final String ABZAN = "Abzan";
+    public static final String JESKAI = "Jeskai";
+    public static final String SULTAI = "Sultai";
+    public static final String MARDU = "Mardu";
+    public static final String TEMUR = "Temur";
+
     public static ManaColor CharToMana(char c) {
         switch (c) {
             case 'W':
@@ -46,124 +68,124 @@ public enum ManaColor {
                 manaColors.add(COLORLESS);
                 break;
 
-            case "Azorius":
+            case AZORIUS:
             case "UW":
             case "WU":
                 manaColors.add(BLUE);
                 manaColors.add(WHITE);
                 break;
-            case "Dimir":
+            case DIMIR:
             case "uB":
             case "BU":
                 manaColors.add(BLUE);
                 manaColors.add(BLACK);
                 break;
-            case "Rakdos":
+            case RAKDOS:
             case "BR":
             case "RB":
                 manaColors.add(BLACK);
                 manaColors.add(RED);
                 break;
-            case "Gruul":
+            case GRUUL:
             case "RG":
             case "GR":
                 manaColors.add(RED);
                 manaColors.add(GREEN);
                 break;
-            case "Selesnya":
+            case SELESNYA:
             case "WG":
             case "GW":
                 manaColors.add(WHITE);
                 manaColors.add(GREEN);
                 break;
-            case "Orzhov":
+            case ORZHOV:
             case "BW":
             case "WB":
                 manaColors.add(WHITE);
                 manaColors.add(BLACK);
                 break;
-            case "Izzet":
+            case IZZET:
             case "UR":
             case "RU":
                 manaColors.add(BLUE);
                 manaColors.add(RED);
                 break;
-            case "Golgari":
+            case GOLGARI:
             case "GB":
             case "BG":
                 manaColors.add(BLACK);
                 manaColors.add(GREEN);
                 break;
-            case "Boros":
+            case BOROS:
             case "WR":
             case "RW":
                 manaColors.add(WHITE);
                 manaColors.add(RED);
                 break;
-            case "Simic":
+            case SIMIC:
             case "UG":
             case "GU":
                 manaColors.add(BLUE);
                 manaColors.add(GREEN);
                 break;
 
-            case "Esper":
+            case ESPER:
                 manaColors.add(WHITE);
                 manaColors.add(BLUE);
                 manaColors.add(BLACK);
                 break;
-            case "Grixis":
+            case GRIXIS:
             case "UBR":
                 manaColors.add(BLUE);
                 manaColors.add(BLACK);
                 manaColors.add(RED);
                 break;
-            case "Jund":
+            case JUND:
             case "BRG":
             case "RGB":
                 manaColors.add(BLACK);
                 manaColors.add(RED);
                 manaColors.add(GREEN);
                 break;
-            case "Naya":
+            case NAYA:
             case "WRG":
                 manaColors.add(WHITE);
                 manaColors.add(RED);
                 manaColors.add(GREEN);
                 break;
-            case "Bant":
+            case BANT:
             case "WUG":
                 manaColors.add(WHITE);
                 manaColors.add(BLUE);
                 manaColors.add(GREEN);
                 break;
-            case "Abzan":
+            case ABZAN:
             case "WBG":
             case "GBW":
                 manaColors.add(WHITE);
                 manaColors.add(BLACK);
                 manaColors.add(GREEN);
                 break;
-            case "Jeskai":
+            case JESKAI:
             case "WUR":
                 manaColors.add(WHITE);
                 manaColors.add(BLUE);
                 manaColors.add(RED);
                 break;
-            case "Sultai":
+            case SULTAI:
             case "UGB":
             case "BUG":
                 manaColors.add(BLUE);
                 manaColors.add(BLACK);
                 manaColors.add(GREEN);
                 break;
-            case "Mardu":
+            case MARDU:
             case "WBR":
                 manaColors.add(WHITE);
                 manaColors.add(BLACK);
                 manaColors.add(RED);
                 break;
-            case "Temur":
+            case TEMUR:
             case "URG":
                 manaColors.add(BLUE);
                 manaColors.add(RED);

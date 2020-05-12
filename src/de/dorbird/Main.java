@@ -8,24 +8,31 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList<LandType> landTypes = new ArrayList<>();
-        landTypes.add(LandType.DUAL);
-        landTypes.add(LandType.TRIOME);
-        landTypes.add(LandType.FETCH);
-        landTypes.add(LandType.SHOCK);
-        landTypes.add(LandType.BOUNCE);
-        landTypes.add(LandType.TRITAP);
-        landTypes.add(LandType.CHECK);
+
 
         System.out.print("Enter a your Deck colors: ");
         Scanner scanner = new Scanner(System.in);
         String inputString = scanner.nextLine();
-        MTGManaBaseBuilder mmbb = new MTGManaBaseBuilder(ManaColor.ColorPairingNameToMana(inputString), landTypes);
+        MTGManaBaseBuilder mmbb = new MTGManaBaseBuilder(ManaColor.ColorPairingNameToMana(inputString));
+
+        System.out.print(String.format("Use default LandTypes(%s)? [y]/[n]: ", mmbb.defaultLandTypes));
+        if(!scanner.nextLine().equals("y")){
+            ArrayList<LandType> types = new ArrayList<>();
+            for (LandType type : mmbb.getAllImplementedLandTypes()) {
+                System.out.print(String.format("Do you want %s Lands in your deck? [y]/[n]: ", type));
+                if (scanner.nextLine().equals("y"))
+                    types.add(type);
+            }
+            mmbb.setLandTypes(types);
+        }
+
+
+
 
         Map<ManaColor, Integer> manaPips = new HashMap<>();
         for (ManaColor color :
                 ManaColor.ColorPairingNameToMana(inputString)) {
-            System.out.print(String.format("Enter pips of the color %s:", color.name()));
+            System.out.print(String.format("Enter pips of the color %s: ", color.name()));
             int pips = scanner.nextInt();
             manaPips.put(color, pips);
         }
